@@ -17,12 +17,13 @@ It uses Hugging Face’s `mistralai/Magistral-Small-2506` model via the official
 
 ## 🛠️ Setup
 
+.env
+PORT = YOUR_PORT
+OPENROUTER_API_KEY = YOUR_KEY
+HF_API_KEY = YOUR_KEY
+
 1. Clone the repo:
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
-.env
-PORT = YOUR_PORT
-OPENROUTER_API_KEY = YOUR_KEY
-HF_API_KEY = YOUR_KEY
