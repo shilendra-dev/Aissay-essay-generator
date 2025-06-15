@@ -4,6 +4,7 @@ AiSsay is a simple, elegant essay generator built with Node.js and React.
 It uses Hugging Face’s `mistralai/Magistral-Small-2506` model via the official `@huggingface/inference` SDK.
 
 ![Homepage Preview](frontend/public/home.png)
+
 ![Generated essay Preview](frontend/public/generatedEssay.png)
 
 ## 🚀 Features

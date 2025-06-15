@@ -35,7 +35,7 @@ function App() {
     }, 1000);
 
     try {
-      const res = await axios.post("http://localhost:5001/api/essay/generate", {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/essay/generate`, {
         topic,
         wordCount,
       });
