@@ -6,6 +6,11 @@ import essayRoutes from './routes/essayRoutes.js';
 dotenv.config();
 const app = express();
 
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://aissay-essay-generator.vercel.app/', // 🔁 Replace with your actual frontend domain
+  ];
+
 app.use(
     cors({
       origin: (origin, callback) => {
