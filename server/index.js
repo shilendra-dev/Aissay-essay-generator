@@ -6,7 +6,20 @@ import essayRoutes from './routes/essayRoutes.js';
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(
+    cors({
+      origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error("Not allowed by CORS"));
+        }
+      },
+      methods: ["GET", "POST"],
+      credentials: true,
+    })
+  );
+  
 app.use(express.json());
 app.use('/api/essay', essayRoutes);
 
