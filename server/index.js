@@ -15,11 +15,14 @@ app.use(
           callback(new Error("Not allowed by CORS"));
         }
       },
-      methods: ["GET", "POST"],
-      credentials: true,
-    })
-  );
-  
+      methods: ["GET", "POST", "OPTIONS"],
+      allowedHeaders: ["Content-Type"],
+  })
+);
+
+// Allow preflight requests
+app.options('*', cors());
+
 app.use(express.json());
 app.use('/api/essay', essayRoutes);
 
